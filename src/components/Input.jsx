@@ -5,7 +5,7 @@ export default function Input({ label, textarea, ...props }) {
        <p className="flex flex-col gap-1 my-4">
         <label htmlFor="" className="text-sm font-bold uppercase text-stone-500">{label}</label>
         {textarea ? (
-            <textarea className={classes} {...props}></textarea>
+            <textarea ref={props.ref} className={classes} {...props}></textarea>
         ) : (
             <input className={classes} {...props}></input>
         )}
